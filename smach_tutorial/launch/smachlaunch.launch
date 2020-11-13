@@ -1,0 +1,23 @@
+<launch>
+
+  <param
+    name="velocity"
+    type="int"
+    value="3"
+  />
+
+  <node
+    pkg="smach_tutorial"
+    type="speak"
+    name="speak" 
+    output="screen"
+    launch-prefix = "xterm -e"
+  />
+
+  <node
+    pkg="smach_tutorial"
+    type="assignment.py"
+    name="assignment" 
+    output="screen"></node>
+
+</launch> 
