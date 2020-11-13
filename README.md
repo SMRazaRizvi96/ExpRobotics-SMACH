@@ -88,6 +88,7 @@ the User has to write the coordinates of the location where the Robot should go.
 Authors:
 
 Laiba Zahid (S4853477): S4853477@STUDENTI.UNIGE.IT
+
 Syed Muhammad Raza Rizvi (S4853521): S4853521@STUDENTI.UNIGE.IT
 
 Initially, we both developed two architectures.
