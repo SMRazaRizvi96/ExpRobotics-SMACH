@@ -5,13 +5,15 @@ This is the 'Assignment 1: Behavioral Architecture' for the course 'Experimental
 
 How to Run:
 
-1. Give running permissions to it with
+1. Clone this repository into the src folder of your ROS workspace
+
+2. Give running permissions to it with
 	$ chmod +x assignment.py
 
-2. Install the visualizer using
+3. Install the visualizer using
    	$ sudo apt-get install ros-melodic-smach-viewer
 
-3. Run the visualizer with
+4. Run the visualizer with
         $ rosrun smach_viewer smach_viewer.py
 
 4. Run the launch file
@@ -30,6 +32,7 @@ ROS Parameters Used:
 1. 'playflag': This parameter is a flag which is 1 if the User has said 'play', and 0 otherwise.
 2. 'velocity': This parameter controls the velocity of the system, since this parameter is used as an argument to the SLEEP command, to simulate the sleep time of the robot and as the time a robot takes to reach a particular position.
 
+**************************
 
 Implementation Details:
 
@@ -65,6 +68,7 @@ Next, a FOR loop starting from 1 till this random number, is started to repeat t
 	The Robot then takes some time to reach that coordinate, stays there, and again comes back near the User, and this repeat.
 	After the FOR loop, the state returns 'after finishing play time' and the Robot transitions to the NORMAL state.
 	
+**************************
 
 The Robot transitions the states on the following rules.
 
@@ -72,6 +76,8 @@ The Robot transitions the states on the following rules.
 2. If the user types 'play' in the SpeakInteraction Node’s terminal, the Robot transitions to the PLAY state.
 3. If the User doesn't type 'play', the Robot transitions to SLEEP state, from NORMAL state.
 4. After SLEEP, again if the user hasn't said 'play', the Robot transitions to NORMAL state.
+
+**************************
 
 Limitations:
 
@@ -90,6 +96,8 @@ Authors:
 Laiba Zahid (S4853477): S4853477@STUDENTI.UNIGE.IT
 
 Syed Muhammad Raza Rizvi (S4853521): S4853521@STUDENTI.UNIGE.IT
+
+**************************
 
 Initially, we both developed two architectures.
 The other architecture was such that rather than using a separate node and the 'playflag' ROS parameter to simulate the speech command,
