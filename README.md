@@ -35,6 +35,7 @@ Implementation Details:
 
 In this Assignment, we have developed a Finite State Machine for a Robot that has three states:
 
+![alt text](https://github.com/SMRazaRizvi96/ExpRobotics-SMACH/blob/main/statemachine.png?raw=true)
 
 1. NORMAL:
 	In this state, the robot has to move on random locations.
