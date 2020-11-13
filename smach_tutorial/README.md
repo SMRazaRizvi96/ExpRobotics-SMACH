@@ -39,7 +39,7 @@ In this node, A User can type what the User wants to say. If the User types 'pla
 
 In this Assignment, we have developed a Finite State Machine for a Robot that has three states:
 
-![alt text](https://github.com/SMRazaRizvi96/ExpRobotics-SMACH/blob/main/statemachine.png?raw=true)
+![alt text](https://github.com/SMRazaRizvi96/ExpRobotics-SMACH/blob/master/smach_tutorial/statemachine.png?raw=true)
 
 ###### 1. NORMAL:
 	In this state, the robot has to move on random locations.
