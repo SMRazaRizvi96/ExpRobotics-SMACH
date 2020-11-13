@@ -1,9 +1,9 @@
 # ExpRobotics-SMACH
-This repository contains the State Machine of a Robot
+This repository contains a Finite State Machine of a Robot
 
 This is the 'Assignment 1: Behavioral Architecture' for the course 'Experimental Robotics'.
 
-How to Run:
+##### How to Run:
 
 1. Clone this repository into the src folder of your ROS workspace
 
@@ -21,30 +21,31 @@ How to Run:
 
 **************************
 
-Files List:
+##### Files List:
 
 1. Assignment.py: This is the State Machine
 2. SpeakInteraction.cpp: This is a Node simulating the speech interaction of a person.
 In this node, A User can type what the User wants to say. If the User types 'play', the parameter 'playflag' in the ROS Parameter server is set to 1.
 	Otherwise, the 'playflag' parameter stays 0.
 
-ROS Parameters Used:
+##### ROS Parameters Used:
+
 1. 'playflag': This parameter is a flag which is 1 if the User has said 'play', and 0 otherwise.
 2. 'velocity': This parameter controls the velocity of the system, since this parameter is used as an argument to the SLEEP command, to simulate the sleep time of the robot and as the time a robot takes to reach a particular position.
 
 **************************
 
-Implementation Details:
+##### Implementation Details:
 
 In this Assignment, we have developed a Finite State Machine for a Robot that has three states:
 
 ![alt text](https://github.com/SMRazaRizvi96/ExpRobotics-SMACH/blob/main/statemachine.png?raw=true)
 
-1. NORMAL:
+###### 1. NORMAL:
 	In this state, the robot has to move on random locations.
 	For this, the Robot first generates a random number between 2 and 5.
 	This is the number of Random locations the Robot will go to.
-Next, a FOR loop starting from 1 till this random number, is started to repeat the Robot movement.
+	Next, a FOR loop starting from 1 till this random number, is started to repeat the Robot movement.
 	In every iteration of the FOR loop, first the 'playflag' parameter is checked.
 	If the 'playflag' is 1, the outcome 'speech command:play' is returned and the Robot transitions to PLAY state.
 	Otherwise, the Robot generates a random coordinate, takes some time to reach there, and stays there for some time.
@@ -53,12 +54,12 @@ Next, a FOR loop starting from 1 till this random number, is started to repeat t
 	the 'playflag' is checked again.
 
 
-2. SLEEP:
+###### 2. SLEEP:
 	In this state, the robot takes some time to reach a predefined Home coordinate and stays there for some time.
 	After this, it returns 'after finishing sleep time' and Transitions to the NORMAL state.
 
 
-3. PLAY:
+###### 3. PLAY:
 	In this state, the Robot has to follow the User commands to go on specific locations given by the User.
 	At first, a random number between 3 and 5 is generated. This is the number of times a User can give pointed gestures to the Robot.
 	Next, a FOR loop starting from 1 till this random number, is started to repeat the Robot movement.
@@ -79,7 +80,7 @@ The Robot transitions the states on the following rules.
 
 **************************
 
-Limitations:
+##### Limitations:
 
 1. Since the System is not using any voice commands, one of the limitations is to type the command rather than saying it.
 2. The System is also not using any cameras to capture the pointed location.
@@ -91,7 +92,7 @@ the User has to write the coordinates of the location where the Robot should go.
 
 **************************
 
-Authors:
+##### Authors:
 
 Laiba Zahid (S4853477): S4853477@STUDENTI.UNIGE.IT
 
