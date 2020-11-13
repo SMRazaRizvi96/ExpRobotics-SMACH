@@ -5,7 +5,7 @@ This is the 'Assignment 1: Behavioral Architecture' for the course 'Experimental
 
 ##### How to Run:
 
-1. Clone this repository into the src folder of your ROS workspace
+1. Go to the 'Master' branch and Clone that repository into the src folder of your ROS workspace
 
 2. Give running permissions to it with
 	$ chmod +x assignment.py
